@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" readonly />
+
+    <div class="buttons">
+<!-- Row 1: Trig & Log -->
+<button data-func="sin" onclick="appendToDisplay('sin(')">sin</button>
+<button data-func="cos" onclick="appendToDisplay('cos(')">cos</button>
+<button data-func="tan" onclick="appendToDisplay('tan(')">tan</button>
+<button onclick="appendToDisplay('log(')">log</button>
+
+      <!-- Row 2: sqrt, ^, Clear, Delete -->
+      <button onclick="appendToDisplay('√')">√</button>
+      <button onclick="appendToDisplay('^')">^</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="deleteOne()">DEL</button>
+
+      <!-- Row 3: Parentheses & ÷, × -->
+      <button onclick="appendToDisplay('(')">(</button>
+      <button onclick="appendToDisplay(')')">)</button>
+      <button onclick="appendToDisplay('/')">÷</button>
+      <button onclick="appendToDisplay('*')">×</button>
+
+      <!-- Row 4: 7, 8, 9, − -->
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('-')">−</button>
+
+      <!-- Row 5: 4, 5, 6, + -->
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('+')">+</button>
+
+      <!-- Row 6: 1, 2, 3, . -->
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('.')">.</button>
+
+      <!-- Row 7: 0, S↔D, =, SHIFT -->
+      <button onclick="appendToDisplay('0')">0</button>
+      <!-- Changed text to "S↔D" -->
+      <button onclick="switchFractionDecimal()">S↔D</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="toggleShift()">SHIFT</button>
+    </div>
+  </div>
+</body>
+</html>
